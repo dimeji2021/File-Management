@@ -6,4 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="sautinsoft.document" Version="5.7.11.28" />
+    <PackageReference Include="ServiceStack" Version="6.5.0" />
+    <PackageReference Include="ServiceStack.Interfaces" Version="6.5.0" />
+  </ItemGroup>
+
 </Project>
