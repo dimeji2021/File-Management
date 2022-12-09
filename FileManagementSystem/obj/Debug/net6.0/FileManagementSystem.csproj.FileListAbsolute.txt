@@ -30,3 +30,5 @@ C:\Users\hp\Desktop\interview questions and answers\FileManagementSystem\FileMan
 C:\Users\hp\Desktop\interview questions and answers\FileManagementSystem\FileManagementSystem\obj\Debug\net6.0\FileManagementSystem.pdb
 C:\Users\hp\Desktop\interview questions and answers\FileManagementSystem\FileManagementSystem\obj\Debug\net6.0\FileManagementSystem.genruntimeconfig.cache
 C:\Users\hp\Desktop\interview questions and answers\FileManagementSystem\FileManagementSystem\obj\Debug\net6.0\ref\FileManagementSystem.dll
+C:\Users\hp\Desktop\interview questions and answers\FileManagementSystem\FileManagementSystem\bin\Debug\net6.0\FileManagementSystemService.dll
+C:\Users\hp\Desktop\interview questions and answers\FileManagementSystem\FileManagementSystem\bin\Debug\net6.0\FileManagementSystemService.pdb

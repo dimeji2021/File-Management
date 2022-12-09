@@ -3,3 +3,10 @@ C:\Users\hp\Desktop\interview questions and answers\FileManagementSystem\FileMan
 C:\Users\hp\Desktop\interview questions and answers\FileManagementSystem\FileManagementSystemService\obj\Debug\net6.0\FileManagementSystemService.AssemblyInfoInputs.cache
 C:\Users\hp\Desktop\interview questions and answers\FileManagementSystem\FileManagementSystemService\obj\Debug\net6.0\FileManagementSystemService.AssemblyInfo.cs
 C:\Users\hp\Desktop\interview questions and answers\FileManagementSystem\FileManagementSystemService\obj\Debug\net6.0\FileManagementSystemService.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\interview questions and answers\FileManagementSystem\FileManagementSystemService\bin\Debug\net6.0\FileManagementSystemService.deps.json
+C:\Users\hp\Desktop\interview questions and answers\FileManagementSystem\FileManagementSystemService\bin\Debug\net6.0\FileManagementSystemService.dll
+C:\Users\hp\Desktop\interview questions and answers\FileManagementSystem\FileManagementSystemService\bin\Debug\net6.0\FileManagementSystemService.pdb
+C:\Users\hp\Desktop\interview questions and answers\FileManagementSystem\FileManagementSystemService\obj\Debug\net6.0\FileManagementSystemService.dll
+C:\Users\hp\Desktop\interview questions and answers\FileManagementSystem\FileManagementSystemService\obj\Debug\net6.0\refint\FileManagementSystemService.dll
+C:\Users\hp\Desktop\interview questions and answers\FileManagementSystem\FileManagementSystemService\obj\Debug\net6.0\FileManagementSystemService.pdb
+C:\Users\hp\Desktop\interview questions and answers\FileManagementSystem\FileManagementSystemService\obj\Debug\net6.0\ref\FileManagementSystemService.dll
