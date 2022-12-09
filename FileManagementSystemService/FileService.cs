@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FileManagementSystemService
 {
-    internal class FileService
+    public class FileService
     {
     }
 }

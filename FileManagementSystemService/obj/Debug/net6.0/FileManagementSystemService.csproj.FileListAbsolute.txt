@@ -1,0 +1,5 @@
+C:\Users\hp\Desktop\interview questions and answers\FileManagementSystem\FileManagementSystemService\obj\Debug\net6.0\FileManagementSystemService.csproj.AssemblyReference.cache
+C:\Users\hp\Desktop\interview questions and answers\FileManagementSystem\FileManagementSystemService\obj\Debug\net6.0\FileManagementSystemService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\Desktop\interview questions and answers\FileManagementSystem\FileManagementSystemService\obj\Debug\net6.0\FileManagementSystemService.AssemblyInfoInputs.cache
+C:\Users\hp\Desktop\interview questions and answers\FileManagementSystem\FileManagementSystemService\obj\Debug\net6.0\FileManagementSystemService.AssemblyInfo.cs
+C:\Users\hp\Desktop\interview questions and answers\FileManagementSystem\FileManagementSystemService\obj\Debug\net6.0\FileManagementSystemService.csproj.CoreCompileInputs.cache
