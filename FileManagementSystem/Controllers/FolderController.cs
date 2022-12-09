@@ -1,10 +1,13 @@
-﻿using FileManagementSystemService;
+﻿using FileManagementSystemService.IService;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FileManagementSystem.Controllers
 {
     [ApiController]
     [Route("api/v1/controller")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
     public class FolderController : Controller
     {
         private readonly IFolderService _folderService;

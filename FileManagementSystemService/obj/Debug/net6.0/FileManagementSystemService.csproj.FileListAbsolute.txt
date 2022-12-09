@@ -10,3 +10,6 @@ C:\Users\hp\Desktop\interview questions and answers\FileManagementSystem\FileMan
 C:\Users\hp\Desktop\interview questions and answers\FileManagementSystem\FileManagementSystemService\obj\Debug\net6.0\refint\FileManagementSystemService.dll
 C:\Users\hp\Desktop\interview questions and answers\FileManagementSystem\FileManagementSystemService\obj\Debug\net6.0\FileManagementSystemService.pdb
 C:\Users\hp\Desktop\interview questions and answers\FileManagementSystem\FileManagementSystemService\obj\Debug\net6.0\ref\FileManagementSystemService.dll
+C:\Users\hp\Desktop\interview questions and answers\FileManagementSystem\FileManagementSystemService\bin\Debug\net6.0\FileManagementSystemDomain.dll
+C:\Users\hp\Desktop\interview questions and answers\FileManagementSystem\FileManagementSystemService\bin\Debug\net6.0\FileManagementSystemDomain.pdb
+C:\Users\hp\Desktop\interview questions and answers\FileManagementSystem\FileManagementSystemService\obj\Debug\net6.0\FileManagementSystemService.csproj.CopyComplete

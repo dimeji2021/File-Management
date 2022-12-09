@@ -14,4 +14,8 @@
     <ProjectReference Include="..\FileManagementSystemService\FileManagementSystemService.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="MyFolder\" />
+  </ItemGroup>
+
 </Project>
