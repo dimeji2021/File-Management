@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "kh+jRRxjiYplU8tVRS1QPly1AY5uegrRI+VG6bgOydzZmFpTjQb0JjOWN/vkvmHiTHcH3iAn2xTdZ95zLELQlg==",
+  "dgSpecHash": "yWY6f7toFmmc+5673aK6A4164Or19KBzSVBIXh37AmBZO6D394/8DqepjpMLyvoJJA6wCrqgvoHUfohByKzYjQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\hp\\Desktop\\interview questions and answers\\FileManagementSystem\\FileManagementSystem\\FileManagementSystem.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\hp\\.nuget\\packages\\fluentvalidation\\11.2.1\\fluentvalidation.11.2.1.nupkg.sha512",
+    "C:\\Users\\hp\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.2.2\\fluentvalidation.aspnetcore.11.2.2.nupkg.sha512",
+    "C:\\Users\\hp\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.2.1\\fluentvalidation.dependencyinjectionextensions.11.2.1.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

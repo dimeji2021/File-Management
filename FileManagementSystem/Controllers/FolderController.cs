@@ -8,7 +8,7 @@ namespace FileManagementSystem.Controllers
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-    public class FolderController : Controller
+    public class FolderController : ControllerBase
     {
         private readonly IFolderService _folderService;
 
@@ -22,12 +22,7 @@ namespace FileManagementSystem.Controllers
             var response = _folderService.CreatFolder(name,path);
             return Ok(response);
         }
-        [HttpPost("create-sub-folder")]
-        public IActionResult CreateSubFolders(string FolderName, string SubFolderName)
-        {
-            var response = _folderService.CreateSubFolders(FolderName, SubFolderName);
-            return Ok(response);
-        }
+       
         [HttpGet("get-folder")]
         public IActionResult GetFolder(string? FolderName)
         {
@@ -35,15 +30,15 @@ namespace FileManagementSystem.Controllers
             return Ok(response);
         }
         [HttpPost("rename-folder")]
-        public IActionResult RenameFolder(string FolderName, string FolderPath, string NewFolderName)
+        public IActionResult RenameFolder(string folderPath, string folder, string newFolder)
         {
-            var response = _folderService.RenameFolder(FolderName, FolderPath, NewFolderName);
+            var response = _folderService.RenameFolder(folderPath, folder, newFolder);
             return Ok(response);
         }
         [HttpDelete("delete-folder")]
-        public IActionResult DeleteFolder(string FolderName, string? FolderPath)
+        public IActionResult DeleteFolder(string FolderPath)
         {
-            var response = _folderService.DeleteFolder(FolderName, FolderPath);
+            var response = _folderService.DeleteFolder(FolderPath);
             return Ok(response);
         }
     }
