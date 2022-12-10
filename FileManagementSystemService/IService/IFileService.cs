@@ -4,13 +4,8 @@ namespace FileManagementSystemService.IService
 {
     public interface IFileService
     {
-        string CreateFilesByFolderName(string FolderName, string FileName);
+        Task<string> CreateFilesInAAFolder(string FolderPath, IFormFile file);
         string DeleteFiles(string filepath);
-        string[] GetAllFileContentByFilePath(string filepath);
-        string[] GetAllFilesByFolderName(string folderName);
-        string ReadFileContent(string filepath, string newContent);
-        string RenameFile(string filepath, string newfileName);
-        string UpdateFileContent(string filepath, string newContent);
-        string UploadFile(IFormFile file, string? FolderPath);
+        string UpdateFile(string filepath, IFormFile newfileName);
     }
 }

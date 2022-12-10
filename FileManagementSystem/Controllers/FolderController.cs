@@ -1,4 +1,5 @@
-﻿using FileManagementSystemService.IService;
+﻿using FileManagementSystemDomain.Dto_s;
+using FileManagementSystemService.IService;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FileManagementSystem.Controllers
@@ -17,22 +18,22 @@ namespace FileManagementSystem.Controllers
             _folderService = folderService;
         }
         [HttpPost("create-folder")]
-        public IActionResult CreatFolder(string name, string? path)
+        public IActionResult CreatFolder(CreateFolderDto model)
         {
-            var response = _folderService.CreatFolder(name,path);
+            var response = _folderService.CreatFolder(model);
             return Ok(response);
         }
        
         [HttpGet("get-folder")]
-        public IActionResult GetFolder(string? FolderName)
+        public IActionResult GetFolder(string path)
         {
-            var response = _folderService.GetFolder(FolderName);
+            var response = _folderService.GetFolder(path);
             return Ok(response);
         }
-        [HttpPost("rename-folder")]
-        public IActionResult RenameFolder(string folderPath, string folder, string newFolder)
+        [HttpPatch("rename-folder")]
+        public IActionResult RenameFolder(RenameFolderDto model)
         {
-            var response = _folderService.RenameFolder(folderPath, folder, newFolder);
+            var response = _folderService.RenameFolder(model);
             return Ok(response);
         }
         [HttpDelete("delete-folder")]

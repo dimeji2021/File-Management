@@ -49,7 +49,7 @@ namespace FileManagementSystemService.Service
                     fileInfo.Directory.Create();
                 }
             }
-            //Create(parentFolder, childFolder);
+            Create(parentFolder, childFolder);
         }
 
         public void DeleteDirectory(string folder)
@@ -85,26 +85,22 @@ namespace FileManagementSystemService.Service
         public async Task WriteDirectory(IFormFile request, string folder)
         {
             string baseDirectory = Directory.GetCurrentDirectory();
-            var path = GetFilePath(baseDirectory, $"{folder}\\{request.FileName}");
-            FileInfo fileInfo = new(path);
-            if (!fileInfo.Exists)
+            var path = GetFilePath(baseDirectory, folder);
+            if (Directory.Exists(path))
             {
-                var dir = Directory.GetDirectories(path);
-                foreach (string d in dir)
+                var filePath = GetFilePath(baseDirectory, $"{folder}\\{request.FileName}");
+                FileInfo fileInfo = new(filePath);
+                using (FileStream stream = new(path, FileMode.CreateNew))
                 {
-                    if (d == folder)
-                    {
-                        path = GetFilePath(baseDirectory, $"{folder}\\{request.FileName}");
-                        break;
-                    }
-                }
+                    await request.CopyToAsync(stream);
+                };
+                await WriteDirectory(request, folder);
             }
-            using (FileStream stream = new(path, FileMode.CreateNew))
-            {
-                await request.CopyToAsync(stream);
-            };
-            await WriteDirectory(request, folder);
             return;
+        }
+        private static string GetFilePath(string folderName, string fileName)
+        {
+            return Path.Combine(folderName, fileName);
         }
         //public bool Delete(string folder)
         //{
@@ -149,10 +145,6 @@ namespace FileManagementSystemService.Service
         //        await request.CopyToAsync(stream);
         //    }
         //}
-        private static string GetFilePath(string folderName, string fileName)
-        {
-            return Path.Combine(folderName, fileName);
-        }
 
     }
 }

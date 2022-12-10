@@ -1,4 +1,5 @@
-﻿using FileManagementSystemService.IService;
+﻿using FileManagementSystemDomain.Dto_s;
+using FileManagementSystemService.IService;
 using Microsoft.AspNetCore.Http;
 using System;
 
@@ -6,36 +7,34 @@ namespace FileManagementSystemService.Service
 {
     public class FolderService : IFolderService
     {
-        public string CreatFolder(string name, string path)
+        public string CreatFolder(CreateFolderDto model)
         {
-            if (path is null)
-            {
-                var createdFolder = Directory.CreateDirectory(Path.Combine(name));
-            }
-            var folder = Directory.CreateDirectory(Path.Combine(path, name));
+            var folder = Directory.CreateDirectory(Path.Combine(model.Path,model.Name));
             return folder.Name;
-
         }
-        public IEnumerable<string> GetFolder(string path)
+        public IEnumerable<string> GetFolder(string? path)
         {
             if (path is not null)
             {
-                return Directory.GetDirectories( path);
+                return Directory.GetDirectories(path);
             }
             else
             {
-
                 return Enumerable.Empty<string>();
             }
         }
-        public string DeleteFolder(string FolderPath)
+        public string DeleteFolder(string folderPath)
         {
-            Directory.Delete(FolderPath, true);
-            return " folder Successfully deleted.";
+            if (Directory.Exists(folderPath))
+            {
+                Directory.Delete(folderPath, true);
+                return " folder Successfully deleted.";
+            }
+            return "folderPath does not exist";
         }
-        public string RenameFolder(string folderPath, string folder,string newFolder)
+        public string RenameFolder(RenameFolderDto model)
         {
-            Directory.Move(Path.Combine(folderPath, folder), Path.Combine(folderPath, newFolder));
+            Directory.Move(Path.Combine(model.FolderPath,model.FolderName), Path.Combine(model.FolderPath, model.NewFolder));
             return "Successfully Renamed";
         }
     }

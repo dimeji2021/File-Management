@@ -1,10 +1,12 @@
-﻿namespace FileManagementSystemService.IService
+﻿using FileManagementSystemDomain.Dto_s;
+
+namespace FileManagementSystemService.IService
 {
     public interface IFolderService
     {
-        string CreatFolder(string name, string path);
+        string CreatFolder(CreateFolderDto model);
         string DeleteFolder(string FolderPath);
         IEnumerable<string> GetFolder(string? path);
-        string RenameFolder(string folderPath, string folder, string newFolder);
+        string RenameFolder(RenameFolderDto model);
     }
 }
