@@ -42,5 +42,11 @@ namespace FileManagementSystem.Controllers
             var response = _folderService.DeleteFolder(FolderPath);
             return Ok(response);
         }
+        [HttpGet("get-all-files-in-a-path")]
+        public IActionResult GetAllFilesInAPath(string path)
+        {
+            var response = _folderService.GetAllFilesInAPath(path);
+            return Ok(response);
+        }
     }
 }

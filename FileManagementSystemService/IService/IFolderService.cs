@@ -8,5 +8,6 @@ namespace FileManagementSystemService.IService
         string DeleteFolder(string FolderPath);
         IEnumerable<string> GetFolder(string? path);
         string RenameFolder(RenameFolderDto model);
+        IEnumerable<string> GetAllFilesInAPath(string path);
     }
 }

@@ -37,5 +37,10 @@ namespace FileManagementSystemService.Service
             Directory.Move(Path.Combine(model.FolderPath,model.FolderName), Path.Combine(model.FolderPath, model.NewFolder));
             return "Successfully Renamed";
         }
+        public IEnumerable<string> GetAllFilesInAPath(string path)
+        {
+            return Directory.GetFiles(path, "*.*", SearchOption.AllDirectories);
+           
+        }
     }
 }

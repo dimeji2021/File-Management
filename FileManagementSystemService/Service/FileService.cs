@@ -10,7 +10,7 @@ namespace FileManagementSystemService.Service
 {
     public class FileService : IFileService
     {
-        public async Task<string> CreateFilesInAAFolder(string FolderPath, IFormFile file)
+        public string CreateFilesInAAFolder(string FolderPath, IFormFile file)
         {
             if (Directory.Exists(FolderPath))
             {
@@ -20,26 +20,36 @@ namespace FileManagementSystemService.Service
             }
             else
             {
-                return "file does not exist";
+                return "folder does not exist";
             }
         }
         public string DeleteFiles(string filepath)
         {
-            if (File.Exists(filepath))
+            if (filepath is not null)
             {
                 File.Delete(filepath);
                 return "sucessfully deleted";
             }
-            return "File does not exist";
+            else
+            {
+                return "supply a correct file path to delete";
+            }
+            
         }
         public string UpdateFile(string filepath, IFormFile newfileName)
         {
             if (File.Exists(filepath))
             {
-                File.Replace(filepath, newfileName.Name, "");
-                return "successful";
+                var path = Path.GetFullPath(filepath);
+                var newFilePath = Path.Combine(path, newfileName.FileName);
+                File.Replace(filepath, newFilePath, path);
+                return "update successful";
             }
             return "Path not found";
+        }
+        private static string GetFilePath(string filepath, string fileName)
+        {
+            return Path.Combine(filepath, fileName);
         }
     }
 }
