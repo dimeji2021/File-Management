@@ -1,38 +1,44 @@
-﻿using FileManagementSystemService.Service;
-using Microsoft.AspNetCore.Http;
+﻿using FileManagementSystemService.IService;
 using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace FileManagementSystem.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class TestController : ControllerBase
+    [SwaggerOperation(Summary = "Signs in the user")]
+    public class ServerFileFolderController : ControllerBase
     {
-        Testing testing = new Testing();
+        private IServerFileFolderService _serverFileFolderService;
+        public ServerFileFolderController(IServerFileFolderService serverFileFolderService)
+        {
+            _serverFileFolderService = serverFileFolderService;
+        }
+
         [HttpPost("create-directory")]
         public IActionResult Create(string parentFolder, string? childFolder)
         {
             if (childFolder is not null)
             {
-                testing.Create(parentFolder, childFolder);
+                _serverFileFolderService.Create(parentFolder, childFolder);
             }
             else
             {
-                testing.Create(parentFolder);
+                _serverFileFolderService.Create(parentFolder);
             }
             return Ok();
         }
         [HttpDelete("delete-directory")]
         public IActionResult DeleteDirectory(string folder, string fileName)
         {
-            testing.DeleteDirectory(folder, fileName);
+            var response = _serverFileFolderService.DeleteDirectory(folder, fileName);
             return Ok();
         }
         [HttpPost("write-to-directory")]
         public IActionResult WriteDirectory(IFormFile request, string folder)
         {
-            testing.WriteDirectory(request, folder);
-            return Ok();
+            var response =_serverFileFolderService.WriteDirectory(request, folder);
+            return Ok(response);
         }
     }
 }

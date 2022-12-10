@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "yWY6f7toFmmc+5673aK6A4164Or19KBzSVBIXh37AmBZO6D394/8DqepjpMLyvoJJA6wCrqgvoHUfohByKzYjQ==",
+  "dgSpecHash": "YX3XRSekLktSNPwYIKBpytdfa+6WK4BU7E4PSpWP4DlGF+ilRSgqYUs30szYURSTWLa8/F+i7ri91Qr9Xli0Wg==",
   "success": true,
   "projectFilePath": "C:\\Users\\hp\\Desktop\\interview questions and answers\\FileManagementSystem\\FileManagementSystem\\FileManagementSystem.csproj",
   "expectedPackageFiles": [
@@ -29,8 +29,9 @@
     "C:\\Users\\hp\\.nuget\\packages\\servicestack.interfaces\\6.5.0\\servicestack.interfaces.6.5.0.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\servicestack.text\\6.5.0\\servicestack.text.6.5.0.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
-    "C:\\Users\\hp\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
-    "C:\\Users\\hp\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\hp\\.nuget\\packages\\swashbuckle.aspnetcore.annotations\\6.4.0\\swashbuckle.aspnetcore.annotations.6.4.0.nupkg.sha512",
+    "C:\\Users\\hp\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
+    "C:\\Users\\hp\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\system.diagnostics.debug\\4.3.0\\system.diagnostics.debug.4.3.0.nupkg.sha512",
