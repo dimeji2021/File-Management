@@ -23,21 +23,15 @@ namespace FileManagementSystem.Controllers
             return Ok();
         }
         [HttpDelete("delete-directory")]
-        public IActionResult DeleteDirectory(string folder)
+        public IActionResult DeleteDirectory(string folder, string fileName)
         {
-            testing.DeleteDirectory(folder);
+            testing.DeleteDirectory(folder, fileName);
             return Ok();
         }
-        [HttpGet("read-directory")]
-        public IActionResult ReadDirectory(string folder)
-        {
-           testing.ReadDirectory(folder);
-           return Ok();
-        }
         [HttpPost("write-to-directory")]
-        public async Task<IActionResult> WriteDirectory(IFormFile request, string folder)
+        public IActionResult WriteDirectory(IFormFile request, string folder)
         {
-            await testing.WriteDirectory(request, folder);
+            testing.WriteDirectory(request, folder);
             return Ok();
         }
     }
