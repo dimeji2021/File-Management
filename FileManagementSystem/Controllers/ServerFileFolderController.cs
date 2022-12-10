@@ -6,7 +6,6 @@ namespace FileManagementSystem.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [SwaggerOperation(Summary = "Signs in the user")]
     public class ServerFileFolderController : ControllerBase
     {
         private IServerFileFolderService _serverFileFolderService;
@@ -15,6 +14,7 @@ namespace FileManagementSystem.Controllers
             _serverFileFolderService = serverFileFolderService;
         }
 
+        [SwaggerOperation(Summary = "This allows you create a folder in the current directory/assembly")]
         [HttpPost("create-directory")]
         public IActionResult Create(string parentFolder, string? childFolder)
         {
@@ -28,12 +28,14 @@ namespace FileManagementSystem.Controllers
             }
             return Ok();
         }
+        [SwaggerOperation(Summary = "This allows you delete a file in a specified directory in the assembly")]
         [HttpDelete("delete-directory")]
         public IActionResult DeleteDirectory(string folder, string fileName)
         {
             var response = _serverFileFolderService.DeleteDirectory(folder, fileName);
             return Ok();
         }
+        [SwaggerOperation(Summary = "This allows you upload a file to a directory")]
         [HttpPost("write-to-directory")]
         public IActionResult WriteDirectory(IFormFile request, string folder)
         {

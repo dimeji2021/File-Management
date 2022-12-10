@@ -1,5 +1,6 @@
 ﻿using FileManagementSystemService.IService;
 using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace FileManagementSystem.Controllers
 {
@@ -15,20 +16,21 @@ namespace FileManagementSystem.Controllers
         {
             _fileService = fileService;
         }
-        
+        [SwaggerOperation(Summary = "This allows you upload a file in a directory, when the path is supplied")]
         [HttpPost("create")]
         public IActionResult CreateFilesInAAFolder(string FolderPath, IFormFile file)
         {
             var response = _fileService.CreateFilesInAAFolder(FolderPath, file);
             return Ok(response);
         }
-        
+        [SwaggerOperation(Summary = "This allows you delete a file when the path is supplied")]
         [HttpDelete("delete-file")]
         public IActionResult DeleteFiles(string filepath)
         {
             var response = _fileService.DeleteFiles(filepath);
             return Ok(response);
         }
+        [SwaggerOperation(Summary = "This allows you update the file content of a directory")]
         [HttpPut("update-file-content")]
         public IActionResult UpdateFileContent(string filepath, IFormFile newfileName)
         {

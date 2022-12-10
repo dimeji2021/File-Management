@@ -13,6 +13,10 @@ builder.Services.AddControllers();
 //Configure service
 builder.Services.AddScoped<IFolderService, FolderService>();
 builder.Services.AddScoped<IFileService, FileService>();
+builder.Services.AddScoped<IServerFileFolderService, ServerFileFolderService>();
+builder.Services.AddSwaggerGen(c => { c.EnableAnnotations(); });
+
+
 // Configuring FluentValidation
 builder.Services.AddFluentValidationAutoValidation().AddFluentValidationClientsideAdapters().AddValidatorsFromAssemblyContaining<CreateFolderDto>();
 builder.Services.AddFluentValidationAutoValidation().AddFluentValidationClientsideAdapters().AddValidatorsFromAssemblyContaining<RenameFolderDto>();

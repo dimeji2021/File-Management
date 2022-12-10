@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using FileManagementSystemService.IService;
+using Microsoft.AspNetCore.Http;
 using ServiceStack.Web;
 using System;
 using System.Collections.Generic;
@@ -67,7 +68,7 @@ namespace FileManagementSystemService.Service
                 return "folder does not exist";
             }
         }
-        public void DeleteDirectory(string folder, string fileName)
+        public string DeleteDirectory(string folder, string fileName)
         {
             string[] files = Directory.GetFiles($"{folder}/");
             foreach (string file in files)
@@ -78,6 +79,7 @@ namespace FileManagementSystemService.Service
                     break;
                 }
             }
+            return "delete successful";
         }
         private static string GetFilePath(string folderName, string fileName)
         {

@@ -6,7 +6,7 @@ namespace FileManagementSystemService.IService
     {
         void Create(string parentFolder);
         void Create(string parentFolder, string childFolder);
-        void DeleteDirectory(string folder, string fileName);
+        string DeleteDirectory(string folder, string fileName);
         string WriteDirectory(IFormFile file, string folder);
     }
 }

@@ -49,3 +49,4 @@ C:\Users\hp\Desktop\interview questions and answers\FileManagementSystem\FileMan
 C:\Users\hp\Desktop\interview questions and answers\FileManagementSystem\FileManagementSystem\bin\Debug\net6.0\FluentValidation.dll
 C:\Users\hp\Desktop\interview questions and answers\FileManagementSystem\FileManagementSystem\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
 C:\Users\hp\Desktop\interview questions and answers\FileManagementSystem\FileManagementSystem\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\hp\Desktop\interview questions and answers\FileManagementSystem\FileManagementSystem\bin\Debug\net6.0\Swashbuckle.AspNetCore.Annotations.dll
